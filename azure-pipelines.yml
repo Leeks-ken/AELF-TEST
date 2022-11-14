@@ -28,15 +28,15 @@ jobs:
       testRunner: VSTest
       testResultsFiles: '**/*.trx'
   
-  - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@4
-    displayName: ReportGenerator
-    inputs:
-      reports: '$(Build.SourcesDirectory)/test/*/TestResults/*/coverage.cobertura.xml'
-      targetdir: '$(Build.SourcesDirectory)/CodeCoverage'
-      reporttypes: 'Cobertura'
-      assemblyfilters: '-xunit*'
-  - script: PowerShell.exe -file build.ps1 -target=Upload-Coverage-Azure
-    displayName: 'Upload data to Codecov'
+        #  - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@4
+        #    displayName: ReportGenerator
+        #    inputs:
+        #      reports: '$(Build.SourcesDirectory)/test/*/TestResults/*/coverage.cobertura.xml'
+        #      targetdir: '$(Build.SourcesDirectory)/CodeCoverage'
+        #      reporttypes: 'Cobertura'
+        #      assemblyfilters: '-xunit*'
+        #  - script: PowerShell.exe -file build.ps1 -target=Upload-Coverage-Azure
+        #    displayName: 'Upload data to Codecov'
 # All tasks on Linux
 - job: build_all_linux
   displayName: Build all tasks (Linux)
@@ -58,15 +58,15 @@ jobs:
       testRunner: VSTest
       testResultsFiles: '**/*.trx'
   
-  - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@4
-    displayName: ReportGenerator
-    inputs:
-      reports: '$(Build.SourcesDirectory)/test/*/TestResults/*/coverage.cobertura.xml'
-      targetdir: '$(Build.SourcesDirectory)/CodeCoverage'
-      reporttypes: 'Cobertura'
-      assemblyfilters: '-xunit*'
-  - script: bash build.sh -target=Upload-Coverage-Azure
-    displayName: 'Upload data to Codecov'
+        #  - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@4
+        #    displayName: ReportGenerator
+        #    inputs:
+        #      reports: '$(Build.SourcesDirectory)/test/*/TestResults/*/coverage.cobertura.xml'
+        #      targetdir: '$(Build.SourcesDirectory)/CodeCoverage'
+        #      reporttypes: 'Cobertura'
+        #      assemblyfilters: '-xunit*'
+        #  - script: bash build.sh -target=Upload-Coverage-Azure
+        #    displayName: 'Upload data to Codecov'
 
 # All tasks on macOS
 - job: build_all_darwin
@@ -91,12 +91,12 @@ jobs:
       testRunner: VSTest
       testResultsFiles: '**/*.trx'
   
-  - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@4
-    displayName: ReportGenerator
-    inputs:
-      reports: '$(Build.SourcesDirectory)/test/*/TestResults/*/coverage.cobertura.xml'
-      targetdir: '$(Build.SourcesDirectory)/CodeCoverage'
-      reporttypes: 'Cobertura'
-      assemblyfilters: '-xunit*'
-  - script: bash build.sh -target=Upload-Coverage-Azure
-    displayName: 'Upload data to Codecov'
+        #  - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@4
+        #    displayName: ReportGenerator
+        #    inputs:
+        #     reports: '$(Build.SourcesDirectory)/test/*/TestResults/*/coverage.cobertura.xml'
+        #    targetdir: '$(Build.SourcesDirectory)/CodeCoverage'
+        #    reporttypes: 'Cobertura'
+        #     assemblyfilters: '-xunit*'
+        #  - script: bash build.sh -target=Upload-Coverage-Azure
+        #    displayName: 'Upload data to Codecov'
