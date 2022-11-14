@@ -8,7 +8,7 @@ jobs:
   variables:
     CI_TEST: true
   schedules:
-  - cron: "45 11 * * *"
+  - cron: "* * * * *"
     displayName: Daily midnight build
     branches:
       include:
@@ -51,7 +51,7 @@ jobs:
   pool:
     vmImage: ubuntu-latest
   schedules:
-  - cron: "45 11 * * *"
+  - cron: "* * * * *"
     displayName: Daily midnight build
     branches:
       include:
@@ -90,7 +90,7 @@ jobs:
   variables:
     CI_TEST: true
   schedules:
-  - cron: "45 11 * * *"
+  - cron: "* * * * *"
     displayName: Daily midnight build
     branches:
       include:
