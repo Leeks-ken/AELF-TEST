@@ -28,7 +28,7 @@ jobs:
       testRunner: VSTest
       testResultsFiles: '**/*.trx'
   
-  - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@4
+  - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@5
     displayName: ReportGenerator
     inputs:
       reports: '$(Build.SourcesDirectory)/test/*/TestResults/*/coverage.cobertura.xml'
@@ -58,7 +58,7 @@ jobs:
       testRunner: VSTest
       testResultsFiles: '**/*.trx'
   
-  - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@4
+  - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@5
     displayName: ReportGenerator
     inputs:
       reports: '$(Build.SourcesDirectory)/test/*/TestResults/*/coverage.cobertura.xml'
@@ -91,7 +91,7 @@ jobs:
       testRunner: VSTest
       testResultsFiles: '**/*.trx'
   
-  - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@4
+  - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@5
     displayName: ReportGenerator
     inputs:
       reports: '$(Build.SourcesDirectory)/test/*/TestResults/*/coverage.cobertura.xml'
